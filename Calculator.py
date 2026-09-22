@@ -51,3 +51,7 @@ def calcular():
     resultado = eval(conta)
     # tira o ".0" quando o resultado e numero inteiro
     if resultado == int(resultado):
+      resultado = int(resultado)
+  except: 
+    visor.delete(0, tk.END)
+    visor.insert(0, "Erro)
