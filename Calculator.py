@@ -37,4 +37,8 @@ def clicar(valor):
 def limpar():
   visor.delete(0, tk.END)
 
-# Apaga so o ultimo numero (botao 
+# Apaga so o ultimo numero (botao ⌫)
+def apagar():
+  texto = visor.get()
+  visir.delete(o, tk.END)
+  
