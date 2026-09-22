@@ -54,4 +54,4 @@ def calcular():
       resultado = int(resultado)
   except: 
     visor.delete(0, tk.END)
-    visor.insert(0, "Erro)
+    visor.insert(0, "Erro")
