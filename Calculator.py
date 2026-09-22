@@ -14,7 +14,7 @@ import tkinter as tk  # biblioteca que cria janelas e botoes
 # -------- PARTE 1: APARENCIA --------
 # TROQUE AQUI: o titulo e as cores da sua calculadora
 
-titulo: "Calciladora do 2A"
+titulo: "Calculadora do 2A"
 
 cor_fundo = "#1e1e2e"  # fundo da janela
 cor_visor = "#2e2e3e"  # fundo do visor
@@ -41,4 +41,13 @@ def limpar():
 def apagar():
   texto = visor.get()
   visir.delete(o, tk.END)
-  
+
+
+# Faz a conta (botao =)
+def calcular():
+  conta = visor.get()
+  conta = conta.replace("x", "*").replace("÷", "/")
+  try:
+    resultado = eval(conta)
+    # tira o ".0" quando o resultado e numero inteiro
+    if resultado == int(resultado):
