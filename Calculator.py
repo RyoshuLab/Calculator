@@ -40,7 +40,7 @@ def limpar():
 # Apaga so o ultimo numero (botao ⌫)
 def apagar():
   texto = visor.get()
-  visir.delete(o, tk.END)
+  visor.delete(o, tk.END)
 
 
 # Faz a conta (botao =)
