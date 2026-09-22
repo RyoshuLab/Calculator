@@ -52,6 +52,24 @@ def calcular():
     # tira o ".0" quando o resultado e numero inteiro
     if resultado == int(resultado):
       resultado = int(resultado)
+    visor.delete(0, tk.END)
+    visor.insert(0, resultado)
   except: 
     visor.delete(0, tk.END)
     visor.insert(0, "Erro")
+
+# Cria um botao na posicao (linha, coluna) da calculadora
+def criar_botao(texto, linha, coluna, cor, comando=None, largura=1):
+  if comando is None:
+    xomando = lambda: clicar(texto)
+  botao = tk.Button(janela, text=texto, font=fonte, bg=cor, fg=cor
+                    activebackground=cor, width=4, height=2,
+                    relief="flat", command=comando)
+botao.grid(row=linha, column=coluna, columnspam=largura,
+           padx=3, pady=3, sticky="nsew")
+
+
+# ------------ PARTE 3: MONTANDO A JANELA -------------
+
+janela = tk.Tk()
+    
